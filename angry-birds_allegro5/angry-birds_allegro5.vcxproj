@@ -126,6 +126,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="deneme.h" />
+    <ClInclude Include="particles.h" />
     <ClInclude Include="vector.h" />
   </ItemGroup>
   <ItemGroup>

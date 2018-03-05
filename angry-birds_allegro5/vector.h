@@ -7,6 +7,12 @@ public:
 		_x = x;
 		_y = y;
 	}
+	vector create(int x, int y) {
+		vector obj;
+		obj.setX(x);
+		obj.setY(y);
+		return obj;
+	}
 	vector(){}// def
 	void setY(int value) {
 		_y = value;
@@ -39,5 +45,29 @@ public:
 	void addTo(vector v2) {
 		_x += v2.getX();
 		_y += v2.getY();
+	}
+	vector add(vector v2) {
+		vector v;
+		return v.create(_x + v2.getX(), _y + v2.getY());
+	}
+	vector subtract(vector v2) {
+		vector v;
+		return v.create(_x - v2.getX(), _y - v2.getY());
+	}
+	vector multiply(float val) {
+		vector v;
+		return v.create(_x * val, _y * val);
+	}
+	vector divide(float val) {
+		vector v;
+		return v.create(_x / val, _y / val);
+	}
+	void multiplyBy(float val) {
+		_x *= val;
+		_y *= val;
+	}
+	void divideBy(float val) {
+		_x /= val;
+		_y /= val;
 	}
 };
